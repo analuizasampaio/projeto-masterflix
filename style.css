@@ -1,3 +1,6 @@
+body{
+    margin: 0;
+}
 .menu-header-search{
     /*Nome da Animação*/
     -webkit-animation-name: expand-input;
