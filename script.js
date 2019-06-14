@@ -31,8 +31,9 @@ filmes.forEach(filme => {
     let titulo = document.createElement('h1')
     titulo.innerHTML = filme.nome
     texto.appendChild(titulo)
-    
 
-
+    let direct = document.createElement('p')
+    direct.innerHTML = filme.diretor
+    texto.appendChild(direct)
 
 });
