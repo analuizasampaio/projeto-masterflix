@@ -43,5 +43,5 @@ filmes.forEach(filme => {
     let desc = document.createElement('p')
     desc.innerHTML = filme.descrição
     texto.appendChild(desc)
-    
+
 });
