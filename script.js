@@ -36,36 +36,53 @@ const filmes = [
     },
 ]
 
+
 let container = document.querySelector('.container')
 
-filmes.forEach(filme => {
+function buscar(){
 
-    let box = document.createElement('div')
-    box.setAttribute('class','fotinha')
-    container.appendChild (box)
+    filmes.forEach(filme => {
 
-    let imagem = document.createElement('img')
-    imagem.src = filme.image
-    box.appendChild(imagem);
+        let input = document.querySelector('.mh-search-input')
+    
+        if (input.value == " " || input.value == ""){
+            let box = document.createElement('div')
+            box.setAttribute('class','fotinha')
+            container.appendChild (box)
+        
+            let imagem = document.createElement('img')
+            imagem.src = filme.image
+            box.appendChild(imagem);
+        
+            let texto = document.createElement('div')
+            texto.setAttribute('class','textinho')
+            container.appendChild(texto)
+        
+            let titulo = document.createElement('h1')
+            titulo.innerHTML = filme.nome
+            texto.appendChild(titulo)
+        
+            let direct = document.createElement('p')
+            direct.innerHTML = filme.diretor
+            texto.appendChild(direct)
+        
+            let gender = document.createElement('p')
+            gender.innerHTML = filme.genero
+            texto.appendChild(gender)
+        
+            let desc = document.createElement('p')
+            desc.innerHTML = filme.descricao
+            texto.appendChild(desc)
+        }else if (input.value == "apagar"){
+    
+            container.innerHTML = ""
+        }else{
+            console.log("fodeu")
+        }
+    
+    });
 
-    let texto = document.createElement('div')
-    texto.setAttribute('class','textinho')
-    container.appendChild(texto)
+}
 
-    let titulo = document.createElement('h1')
-    titulo.innerHTML = filme.nome
-    texto.appendChild(titulo)
-
-    let direct = document.createElement('p')
-    direct.innerHTML = filme.diretor
-    texto.appendChild(direct)
-
-    let gender = document.createElement('p')
-    gender.innerHTML = filme.genero
-    texto.appendChild(gender)
-
-    let desc = document.createElement('p')
-    desc.innerHTML = filme.descricao
-    texto.appendChild(desc)
-
-});
+let botao = document.querySelector('.botao')
+botao.onclick = buscar;
