@@ -39,15 +39,8 @@ const filmes = [
 
 let container = document.querySelector('.container')
 
-
-
-function buscar(){
-
+function criar(){
     filmes.forEach(filme => {
-
-        let input = document.querySelector('.mh-search-input')
-    
-        if (input.value == " " || input.value == ""){
 
             let caixa = document.createElement('div');
             caixa.setAttribute('class','caixinha')
@@ -80,16 +73,8 @@ function buscar(){
             let desc = document.createElement('p')
             desc.innerHTML = filme.descricao
             texto.appendChild(desc)
-        }else if (input.value == "apagar"){
-    
-            container.innerHTML = ""
-        }else{
-            console.log("fodeu")
-        }
-    
-    });
+    })}
 
-}
 
 let botao = document.querySelector('.botao')
-botao.onclick = buscar;
+botao.onclick = criar;
