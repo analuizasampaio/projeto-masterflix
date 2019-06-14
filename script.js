@@ -36,4 +36,12 @@ filmes.forEach(filme => {
     direct.innerHTML = filme.diretor
     texto.appendChild(direct)
 
+    let gender = document.createElement('p')
+    gender.innerHTML = filme.genero
+    texto.appendChild(gender)
+
+    let desc = document.createElement('p')
+    desc.innerHTML = filme.descrição
+    texto.appendChild(desc)
+    
 });
