@@ -41,6 +41,8 @@ main{
 }
 
 nav{
+    display: flex;
+    height: 80px;
     background-color: black;
     margin-bottom: 10px;
 }
@@ -54,14 +56,21 @@ nav{
 
 nav div img{
     width: 200px;
-    
 }
 
 .fotinha img{
     width: 200px;
     height: 290px;
+    margin-bottom: 20px;
 }
 
 .textinho{
+    width: 70%;
+    margin-left: 20px;
+    font-family: 'Roboto', sans-serif;
+}
 
+.caixinha{
+    display: flex;
+    align-items: center;
 }
