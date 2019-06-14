@@ -1,40 +1,11 @@
-.menu-header-search{
-    /*Nome da Animação*/
-    -webkit-animation-name: expand-input;
-    -moz-animation-name: expand-input; 
-    animation-name: expand-input;
-    /*Duração da Animação*/
-    -webkit-animation-duration: 1s;
-    -moz-animation-duration: 1s;
-    animation-duration: 1s;
-    /* Contador de Execução da Animação*/
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-}
-/*Animação !importante ter os prefixos, apenas o keyframe sózinho não será executado*/
-@-webkit-keyframes expand-input {
-    0% {transform: scale(1)}
-    50% {transform: scale(1.015)}
-    100% {transform: scale(1)}
-}
-@-moz-keyframes expand-input {
-    0% {transform: scale(1)}
-    50% {transform: scale(1.015)}
-    100% {transform: scale(1)}
+body{
+    margin: 0;
 }
 
-@keyframes expand-input {
-    0% {transform: scale(1)}
-    50% {transform: scale(1.015)}
-    100% {transform: scale(1)}
+main{
+    margin-left: 6px;
 }
-@keyframes fixar-tamanho{
-    0% {transform: scale(1)}
-    50% {transform: scale(1)}
-    100% {transform: scale(1)}
-}
-/* */
+
 .botao{  
     color: #ffffffef;
     font-weight: bold;
@@ -43,40 +14,44 @@
     display: flex;
     align-items: center;
     font-size: 1.5em;
-    background-color: #45a049;
-    border: solid 1px #45a049;
+    background-color: #db202c;
+    border: solid 1px #db202c;
     -webkit-border-radius: 0 5px 5px 0;
     -moz-border-radius: 0 5px 5px 0;
     border-radius: 0 5px 5px 0;
 }
-.botao{  
-    color: #ffffffef;
-    font-weight: bold;
-    padding: 0 5px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    font-size: 1.5em;
-    background-color: red;
-    border: solid 1px red;
-    -webkit-border-radius: 0 5px 5px 0;
-    -moz-border-radius: 0 5px 5px 0;
-    border-radius: 0 5px 5px 0;
+
+.mh-search-input{
+    width: 600px;
 }
+
 .menu-header-search input{
     border-radius: 5px 0 0 5px !important;
 }
+
 .menu-header-search span{
     margin-right: 1ch;
     font-size: 0.8em;
 }
-.input-conteiner{
-    margin-top: 40px;
+
+.menu-header-search{
+    width: 100%;
     display: flex;
     justify-content: center;
-    width: 100%;
 }
-.menu-header-search{
-    width: 300px;
-    display:flex;
+
+nav{
+    background-color: black;
+    margin-bottom: 10px;
+}
+
+.logo{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav div img{
+    width: 200px;
 }
