@@ -11,7 +11,7 @@ const filmes = [
         "diretor": " John R. Leonetti",
         "genero": "Terror",
         "image": "https://m.media-amazon.com/images/M/MV5BOTQwZmQyYzEtODk5ZC00OTY3LWExMjAtYzRjNWFhNGM3MzBlXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_.jpg",
-        "descricao": "John Form acha que encontrou o presente ideal para sua esposa grávida, uma boneca vintage. No entanto, a alegria do casal não dura muito. Uma noite terrível, membros de uma seita satânica invadem a casa do casal em um ataque violento. Ao tentarem invocar um demônio, eles mancham a boneca de sangue, tornando-a receptora de uma entidade do mal."
+        "descricao": "John Form acha que encontrou o presente ideal para sua esposa grávida, uma boneca. No entanto, a alegria do casal não dura muito. Uma noite terrível, membros de uma seita satânica invadem a casa do casal em um ataque violento. Ao tentarem invocar um demônio, eles mancham a boneca, tornando-a receptora de uma entidade."
     },
     {
         "nome": "A Bela e a Fera",
