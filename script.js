@@ -38,6 +38,7 @@ const filmes = [
 
 
 let container = document.querySelector('.container')
+// let lateral = document.querySelector('.lateral')
 
 function criar(){
     filmes.forEach(filme => {
