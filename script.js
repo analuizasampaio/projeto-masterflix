@@ -1,4 +1,4 @@
-let filmes = [
+const filmes = [
     {
         nome: "Moonlight",
         diretor: "Barry Jenkins",
@@ -34,6 +34,14 @@ let filmes = [
         image: "https://i.pinimg.com/originals/bc/ff/ba/bcffba0c628dc8a378dbf2fb604c8137.jpg",
         descricao: "Depois de descobrir que ele pode viajar no tempo, o jovem Tim Lake usa sua habilidade para ganhar o coração da mulher dos seus sonhos e salvar seu amigo de um desastre profissional."
     },
+    {
+        nome: "Uma Linda Mulher",
+        diretor: "Garry Marshall",
+        genero: "Romance",
+        image:"https://s2.glbimg.com/NwXHua9WxtS7gyKLKRa99jpbwd8=/top/e.glbimg.com/og/ed/f/original/2015/03/23/pretty-woman-1990.jpg",
+        descricao: "DescriçãoDurante uma viagem de negócios a Los Angeles, Edward, um executivo que compra e fragmenta empresas para vendê-las, encontra a prostituta Vivian. Edward a contrata para ficar com ele durante uma semana a fim de acompanhá-lo nos jantares de negócios. Os dois se aproximam e descobrem que há vários obstáculos para serem superados até que possam unir seus mundos tão diferentes."
+    }
+
 ]
 
 
@@ -44,43 +52,15 @@ let caixa = document.createElement('div');
 caixa.setAttribute('class','caixinha')
 
 function pesquisarFilme(){
-    for( let i=0; i <= filmes.length; i++ ){
-        caixa.innerHTML = ""
+    for( let i=0; i <= filmes.length; i++ ){  
 
             for (let j=0; j <= filmes.length; j++){
 
-                if(input.value == filmes[j].nome){
+                if(input.value == filmes[j].nome || input.value == filmes[j].genero || input.value == filmes[j].diretor){
 
                     caixa.innerHTML = `
                     <div class="fotinha">
-                       <img src="${filmes[j].image}" alt="${filmes.nome}">
-                    </div>
-                   <div class="textinho">
-                       <h1>${filmes[j].nome}</h1>
-                       <p>Diretor: ${filmes[j].diretor}</p>
-                       <p>Gênero: ${filmes[j].genero}</p>
-                       <p>Sinopse: ${filmes[j].descricao}</p>
-                   </div>
-                    `
-                    container.appendChild(caixa)
-                }else if(input.value == filmes[j].genero){
-                    caixa.innerHTML = `
-                    <div class="fotinha">
-                       <img src="${filmes[j].image}" alt="${filmes.nome}">
-                    </div>
-                   <div class="textinho">
-                       <h1>${filmes[j].nome}</h1>
-                       <p>Diretor: ${filmes[j].diretor}</p>
-                       <p>Gênero: ${filmes[j].genero}</p>
-                       <p>Sinopse: ${filmes[j].descricao}</p>
-                   </div>
-                    `
-                    container.appendChild(caixa)
-                    
-                }else if(input.value == filmes[j].diretor){
-                    caixa.innerHTML = `
-                    <div class="fotinha">
-                       <img src="${filmes[j].image}" alt="${filmes.nome}">
+                       <img src="${filmes[j].image}" alt="${filmes[j].nome}">
                     </div>
                    <div class="textinho">
                        <h1>${filmes[j].nome}</h1>
@@ -96,7 +76,25 @@ function pesquisarFilme(){
     } 
 }
 
+function criar(){
+    filmes.forEach(filme => {
 
+        let caixa = document.createElement('div');
+        caixa.setAttribute('class','caixinha')
+        caixa.innerHTML = `
+                <div class="fotinha">
+                   <img src="${filme.image}" alt="${filme.nome}">
+                </div>
+               <div class="textinho">
+                   <h1>${filme.nome}</h1>
+                   <p>Diretor: ${filme.diretor}</p>
+                   <p>Sinopse: ${filme.descricao}</p>
+               </div>
+        `
+        container.appendChild(caixa)
+    })
+}
 
 let botao = document.querySelector('.botao')
 botao.onclick = pesquisarFilme;
+
