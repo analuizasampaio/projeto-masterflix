@@ -8,7 +8,7 @@ const filmes = [
     },
     {
         "nome": "Annabelle",
-        "diretor": " John R. Leonetti",
+        "diretor": "John R. Leonetti",
         "genero": "Terror",
         "image": "https://m.media-amazon.com/images/M/MV5BOTQwZmQyYzEtODk5ZC00OTY3LWExMjAtYzRjNWFhNGM3MzBlXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_.jpg",
         "descricao": "John Form acha que encontrou o presente ideal para sua esposa grávida, uma boneca. No entanto, a alegria do casal não dura muito. Uma noite terrível, membros de uma seita satânica invadem a casa do casal em um ataque violento. Ao tentarem invocar um demônio, eles mancham a boneca, tornando-a receptora de uma entidade."
@@ -43,37 +43,47 @@ let container = document.querySelector('.container')
 function criar(){
     filmes.forEach(filme => {
 
-            let caixa = document.createElement('div');
-            caixa.setAttribute('class','caixinha')
-            container.appendChild(caixa)
+        let caixa = document.createElement('div');
+        caixa.setAttribute('class','caixinha')
+        caixa.innerHTML = `
+                <div class="fotinha">
+                   <img src="${filme.image}" alt="${filme.nome}">
+                </div>
+               <div class="textinho">
+                   <h1>${filme.nome}</h1>
+                   <p>Diretor: ${filme.diretor}</p>
+                   <p>Sinopse: ${filme.descricao}</p>
+               </div>
+        `
+        container.appendChild(caixa)
 
-            let box = document.createElement('div')
-            box.setAttribute('class','fotinha')
-            caixa.appendChild (box)
+            // let box = document.createElement('div')
+            // box.setAttribute('class','fotinha')
+            // caixa.appendChild (box)
         
-            let imagem = document.createElement('img')
-            imagem.src = filme.image
-            box.appendChild(imagem);
+            // let imagem = document.createElement('img')
+            // imagem.src = filme.image
+            // box.appendChild(imagem);
         
-            let texto = document.createElement('div')
-            texto.setAttribute('class','textinho')
-            caixa.appendChild(texto)
+            // let texto = document.createElement('div')
+            // texto.setAttribute('class','textinho')
+            // caixa.appendChild(texto)
         
-            let titulo = document.createElement('h1')
-            titulo.innerHTML = filme.nome
-            texto.appendChild(titulo)
+            // let titulo = document.createElement('h1')
+            // titulo.innerHTML = filme.nome
+            // texto.appendChild(titulo)
         
-            let direct = document.createElement('p')
-            direct.innerHTML = filme.diretor
-            texto.appendChild(direct)
+            // let direct = document.createElement('p')
+            // direct.innerHTML = filme.diretor
+            // texto.appendChild(direct)
         
-            let gender = document.createElement('p')
-            gender.innerHTML = filme.genero
-            texto.appendChild(gender)
+            // let gender = document.createElement('p')
+            // gender.innerHTML = filme.genero
+            // texto.appendChild(gender)
         
-            let desc = document.createElement('p')
-            desc.innerHTML = filme.descricao
-            texto.appendChild(desc)
+            // let desc = document.createElement('p')
+            // desc.innerHTML = filme.descricao
+            // texto.appendChild(desc)
     })}
 
 
