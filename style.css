@@ -106,11 +106,13 @@ footer{
         font-size: 10pt;
     }
     .logo{
-        margin-left: 250px;
-        width: 30%;
+        margin-left: 150px;
+        width: 90%;
     }
     .menu-header-search{
-        display: none;
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
     }
 }
 
@@ -126,11 +128,12 @@ footer{
         font-size: 10pt;
     }
     .logo{
-        /* display: flex; */
-        margin-left: 150px;
+        margin-left: 420px;
         width: 30%;
     }
     .menu-header-search{
-        display: none;
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
     }
 }
