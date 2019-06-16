@@ -51,25 +51,51 @@ function pesquisarFilme(){
 
                 if(input.value == filmes[j].nome){
 
-                    
                     caixa.innerHTML = `
-                            <div class="fotinha">
-                               <img src="${filmes[j].image}" alt="${filmes.nome}">
-                            </div>
-                           <div class="textinho">
-                               <h1>${filmes[j].nome}</h1>
-                               <p>Diretor: ${filmes[j].diretor}</p>
-                               <p>Sinopse: ${filmes[j].descricao}</p>
-                           </div>
+                    <div class="fotinha">
+                       <img src="${filmes[j].image}" alt="${filmes.nome}">
+                    </div>
+                   <div class="textinho">
+                       <h1>${filmes[j].nome}</h1>
+                       <p>Diretor: ${filmes[j].diretor}</p>
+                       <p>Gênero: ${filmes[j].genero}</p>
+                       <p>Sinopse: ${filmes[j].descricao}</p>
+                   </div>
                     `
                     container.appendChild(caixa)
-
-                    }
+                }else if(input.value == filmes[j].genero){
+                    caixa.innerHTML = `
+                    <div class="fotinha">
+                       <img src="${filmes[j].image}" alt="${filmes.nome}">
+                    </div>
+                   <div class="textinho">
+                       <h1>${filmes[j].nome}</h1>
+                       <p>Diretor: ${filmes[j].diretor}</p>
+                       <p>Gênero: ${filmes[j].genero}</p>
+                       <p>Sinopse: ${filmes[j].descricao}</p>
+                   </div>
+                    `
+                    container.appendChild(caixa)
+                    
+                }else if(input.value == filmes[j].diretor){
+                    caixa.innerHTML = `
+                    <div class="fotinha">
+                       <img src="${filmes[j].image}" alt="${filmes.nome}">
+                    </div>
+                   <div class="textinho">
+                       <h1>${filmes[j].nome}</h1>
+                       <p>Diretor: ${filmes[j].diretor}</p>
+                       <p>Gênero: ${filmes[j].genero}</p>
+                       <p>Sinopse: ${filmes[j].descricao}</p>
+                   </div>
+                    `
+                    container.appendChild(caixa)
+                }
             
             }
-        
-            } 
-    }
+    } 
+}
+
 
 
 let botao = document.querySelector('.botao')
